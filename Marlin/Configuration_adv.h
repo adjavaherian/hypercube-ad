@@ -3153,7 +3153,7 @@
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    * @section tmc/stallguard
    */
-  #define SENSORLESS_HOMING // StallGuard capable drivers only
+  // #define SENSORLESS_HOMING // StallGuard capable drivers only
   #define R_SENSE           0.22
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
