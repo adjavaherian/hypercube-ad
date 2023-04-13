@@ -214,14 +214,15 @@
       #define BTN_EN1                EXP1_03_PIN
       #define BTN_EN2                EXP1_05_PIN
     #else
-      #define LCD_PINS_RS            EXP1_04_PIN
-      #define LCD_PINS_ENABLE        EXP1_03_PIN
-      #define LCD_PINS_D4            EXP1_05_PIN
-      #define LCD_PINS_D5            EXP1_06_PIN
-      #define LCD_PINS_D6            EXP1_07_PIN
-      #define LCD_PINS_D7            EXP1_08_PIN
-      #define BTN_EN1                EXP2_05_PIN
-      #define BTN_EN2                EXP2_03_PIN
+      #define LCD_PINS_RS                     82 //EXP1
+      #define LCD_PINS_ENABLE                 61 //EXP1
+      #define LCD_PINS_D4                     59 //EXP1
+      #define LCD_PINS_D5                     70 //EXP1
+      #define LCD_PINS_D6                     85 //EXP1
+      #define LCD_PINS_D7                     71 //EXP1
+      
+      #define BTN_EN1                         72 //EXP2
+      #define BTN_EN2                         14 //EXP2
 
       #if ENABLED(REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER)
         #define BTN_ENC_EN           LCD_PINS_D7  // Detect the presence of the encoder
@@ -229,9 +230,13 @@
 
     #endif
 
-    #define BTN_ENC                  EXP1_02_PIN  // P1
-    #define BEEPER_PIN               EXP1_01_PIN  // P1
-    #define SD_DETECT_PIN            EXP2_07_PIN
+    #define BTN_ENC                            9  // EXP1 9
+    #define BEEPER_PIN                        84  // EXP1
+    #define SD_DETECT_PIN                     15  // EXP2 CD
+    
+    #define DOGLCD_A0                         LCD_PINS_RS
+    #define DOGLCD_CS                         LCD_PINS_ENABLE
+    #define LCD_RESET_PIN                     LCD_PINS_D4
 
   #endif // IS_ULTIPANEL || TOUCH_UI_ULTIPANEL
 #endif // HAS_WIRED_LCD
